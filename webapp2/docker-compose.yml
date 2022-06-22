@@ -3,9 +3,10 @@ services:
   web:
     build: .
     ports:
-      - 8080:8080
+      - 8443:8443
     volumes:
       - ./src:/go/src
+      - ./cert:/go/cert
     tty: true
     depends_on:
       - db
